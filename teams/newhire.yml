@@ -6,6 +6,7 @@
 
 name: Newhire
 policies:
+  - path: ../lib/enable_gatekeeper_policy.yml
   - path: ../lib/macos-device-health.policies.yml
   - path: ../lib/windows-device-health.policies.yml
   - path: ../lib/linux-device-health.policies.yml
@@ -16,6 +17,7 @@ agent_options:
   path: ../lib/agent-options.yml
 controls:
   scripts:
+    - path: ../lib/enable_gatekeeper.sh
     - path: ../lib/remove-zoom-artifacts.script.sh
     - path: ../lib/set-timezone.script.sh
   enable_disk_encryption: true
